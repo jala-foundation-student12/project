@@ -30,16 +30,9 @@ export class ProfileComponent implements OnInit {
   
   constructor(
     private fb: FormBuilder, private router: Router,
-    private socialnetService: SocialNetService,
     private userService: UserService
   ){ 
     this.currentUser = this.userService.user;
-    
-    this.socialnetService.getSocialnetById(this.currentUser.uid).subscribe((resp:any)=>{
-      this.currentUserSocialnet = resp.socialnetById;
-      /* ----- Social Network ----- */
-      this.loadSocialnet();
-    });
 
     console.log(this.currentUser);
     /* ----- User information ----- */
@@ -55,57 +48,14 @@ export class ProfileComponent implements OnInit {
       address: [this.currentUser.address]
     });
 
-    /* ----- Social Network ----- */
-    //this.loadSocialinfo(); //charged on onInit
-
-    /* ----- Social Information ----- */
-    //this.loadSocialinfo();
-
     this.nameUser = this.currentUser.name;
     this.lastnameUser = this.currentUser.lastname; 
 
   }//constructor()
 
   
-  loadSocialnet(){
-    this.socialnetForm = this.fb.group({
-      facebook: [this.currentUserSocialnet?.facebook],
-      twitter: [this.currentUserSocialnet?.twitter],
-      instagram: [this.currentUserSocialnet?.instagram],
-      snapchat: [this.currentUserSocialnet?.snapchat],
-      whatsapp: [this.currentUserSocialnet?.whatsapp]
-    }); 
-  }//loadSocialnet()
-  
-  loadUserinfo(){
-    
-  }
-
-
+ 
   ngOnInit(): void {
-    this.loadSocialnet();
-    //this.changename();
-    // this.loadUserinfo();
-  }
-
-  updateSocialnet(){
-    console.log(this.socialnetForm);
-    this.socialnetFormSubmitted = true;
-    if(this.socialnetForm.invalid){
-      console.log("invalid data info update");
-      return;
-    }
-    this.socialnetService.updateSocialNet(this.socialnetForm.value, this.currentUserSocialnet.uid).
-    subscribe(resp=>{
-      console.log(resp);
-      Swal.fire({
-        icon: 'success',
-        title: 'Saved data',
-        text: 'Your data has been updated'
-      });
-    },(err)=>{
-      console.log(err);
-    })
   }
 
   sendUserinfo(){

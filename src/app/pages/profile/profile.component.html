@@ -87,43 +87,5 @@
             </form>
         </div>
 
-        <div class="information__social-networks user-information">
-
-            <h2>Social Networks</h2>
-
-            <form [formGroup]="socialnetForm" (ngSubmit)="updateSocialnet()" id="form-sn">
-                
-                <div class="input-group" >
-                    <label for="sn_facebook">Facebook:</label>
-                    <input type="text" formControlName="facebook">
-                </div>
-
-                <div class="input-group">
-                    <label for="sn_twitter">Twitter:</label>
-                    <input type="text" formControlName="twitter">
-                </div>
-
-                <div class="input-group">
-                    <label for="sn_instagram">Instagram:</label>
-                    <input type="text">
-                </div>
-
-                <div class="input-group">
-                    <label for="sn_snapchat">Snapchat:</label>
-                    <input type="text" formControlName="snapchat">
-                </div>
-
-                <div class="input-group">
-                    <label for="sn_whatsapp">WhatsApp:</label>
-                    <input type="text" formControlName="whatsapp">
-                </div>
-
-                <div class="input-submit">
-                    <input type="submit" value="Save">
-                </div>
-
-            </form>
-        </div>
-
     </div>
 </section>
