@@ -1,1 +1,256 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+
+
+:root{
+    --primary-color: #ff9800;
+    --secondary-color: #ef6c00;
+    --primary-dark-color: #c66900;
+    --primary-light-color: #ffc947;
+    --secondary-dark-color: #b53d00;
+    --secondary-light-color: #ff9d3f;
+    --third-color: rgb(245, 240, 240);
+    --background-body: white;
+
+    --logo-font: 'Pacifico', cursive;
+    --header-font: 'Lato', sans-serif;
+    --text-font: 'Lato', sans-serif;
+    --text-font-2: 'PT Sans', sans-serif;
+    --subtitle-font: 'Roboto', sans-serif;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background-color: var(--background-body);
+}
+
+.logo-name{
+    padding: 0px 8px;
+    font-family: var(--logo-font);
+    font-size: 30pt;
+    color: white;
+}
+
+.user--img-container{
+    height: 50px;
+    width: 50px;
+}
+
+.user--img-container img{
+    width: 100%
+}
+
+.user-name{
+    padding: 0px 8px;
+    font-family: var(--header-font);
+}
+
+.button-container{
+    padding: 10px 25px;
+}
+
+.button-container button{
+    color: var(--primary-dark-color);
+    padding: 10px 20px;
+    font-size: 12pt;
+    background-color: transparent;
+    border: 1px solid var(--primary-color);
+}
+
+.button-container button:hover{
+    background-color: var(--primary-color);
+    color: white;
+    cursor: pointer;
+    
+}
+
+.break{
+    margin: 0 auto;
+    width: 80%;
+    border-top: 2px solid var(--secondary-color);
+}
+
+/* social network */
+
+.user-information{
+    margin: 50px auto;
+    width: 80%;
+    padding: 15px 0;
+    background-color: var(--third-color);
+    border-radius: 10px;
+    padding-bottom: 40px;
+}
+
+.user-information h2{
+    font-size: 25pt;
+    color: var(--secondary-color);
+    font-family: var(--text-font);
+    margin: 0px 30px;
+    padding: 20px;
+}
+
+.information__personal-info{
+    margin-top: 200px;
+}
+
+form{
+    width: 70%;
+    margin: 0 auto;
+    background-color: rgba(95, 41, 41, 0.1);
+    border-radius: 10px;
+    padding: 20px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form .input-group{
+    width: 90%;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* background-color: rgba(0,0,0,.5); */
+}
+
+form .input-group input[type='text'],
+form .input-group input[type='email'],
+form .input-group input[type='tel'],
+form .input-group input[type='date']
+{
+    width: 70%;
+    padding: 5px 10px;
+    border: none;
+    border-bottom: 1px solid var(--secondary-color);
+    background-color: transparent;
+    font-family: var(--text-font);
+    font-size: 16pt;
+}
+
+form .input-group input[type='text']:focus{
+    outline: none;
+}
+
+form .input-group label{
+    font-family: var(--text-font-2);
+    font-weight: bold;
+    font-size: 18pt;
+    color: var(--primary-color);
+}
+
+form .input-submit{
+    width: 100%;
+    margin: 20px;
+    display: flex;
+    justify-content: flex-end;
+    margin-left: -15px;
+}
+
+form .input-submit input[type='submit']{
+    padding: 10px 20px;
+    font-size: 12pt;
+    border: 1px solid var(--primary-color);
+    background-color: var(--primary-color);
+    color: white;
+}
+
+form .input-submit input[type='submit']:hover{
+    background-color: var(--primary-dark-color);
+    cursor: pointer;
+}
+
+/* ----- Notification, Contacts ----- */
+
+.notifications,
+.contacts,
+.discover{
+    width: 40%;
+    margin: 50px auto;
+    padding: 50px;
+    background: var(--third-color);
+    border-radius: 7px;
+    
+}
+
+.subtitle{
+    font-family: var(--subtitle-font);
+    font-size: 12pt; 
+    display: inline-block;
+    padding-bottom: 5px;
+    border-bottom: 2px solid transparent;
+    transition: color 1s, border-bottom 1s;
+}
+
+.subtitle:hover{
+    border-bottom: 2px solid var(--secondary-color);
+    color: var(--secondary-color);
+    cursor: pointer;
+}
+
+.notification__profile-user,
+.contacts__profile-user{
+    display: flex;
+    align-items: center;
+}
+
+/* ----- Contacts -----*/
+
+.contacts__user-contacts{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.contacts__profile-user{
+    margin: 15px; 
+    padding: 25px 20px;
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 7px;
+}
+
+.user-contact-info{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.user-contact-info a{
+    text-decoration: none;
+    color: black;
+}
+
+.user-location{
+    font-family: var(--text-font);
+    padding: 8px;
+    margin: 3px;
+}
+
+.user-see-more--btn{
+    font-family: var(--text-font);
+    font-size: 12pt;
+    padding: 3px 1px;
+    width: 90px;
+    align-self: flex-end;
+    border: none;
+    background-color: transparent;
+    border-bottom: 1px solid var(--secondary-dark-color);
+    color: var(--secondary-dark-color);
+    transition: color 1s, border-bottom 1s;
+}
+
+.user-see-more--btn:hover{
+    cursor: pointer;
+    border-bottom: 1px solid var(--secondary-light-color);
+    color: var(--secondary-light-color);
+}
+
+/* Error profile */
+
+.profile-error{
+    margin: 200px 0;
+}

@@ -1,0 +1,70 @@
+
+/* ----- header ----- */
+header{
+    background-color: var(--primary-color); 
+}
+
+.header__logo-profile-navbar{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px 20px; 
+}
+
+.header__logo-kinc{
+    display: flex;
+    align-items: center;
+}
+
+.header__logo-kinc a{
+    text-decoration: none;
+    color: white;
+}
+
+.header__profile-user{
+    display: flex;
+    align-items: center;
+}
+
+/* header navbar */
+.header__navbar{
+    
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.header__navbar a{
+    background-color: var(--secondary-color);
+    font-style: none;
+    color: white;
+    font-size: 12pt;
+    text-decoration: none;
+    padding: 10px 20px;
+    font-family: var(--header-font);
+    font-weight: bolder;
+}
+
+.header__navbar a:hover{
+    background-color: var(--primary-dark-color);
+}
+
+/* ------ Start page header ------ */
+
+.header__navbar--sign{
+    margin: 0 10px;
+}
+
+a.sign--focus{
+    background-color: var(--secondary-light-color);
+    cursor: pointer;
+}
+
+a.sign--focus:hover{
+    background-color: var(--primary-light-color);
+    cursor: pointer;
+}
+
+.navbar__logout{
+    margin-left: 50px;
+}

@@ -1,0 +1,111 @@
+/* section about story */
+
+.about__info{
+    display: flex;
+    width: 80%;
+    margin: 50px auto;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-start-page{
+    font-size: 50pt;
+    color: var(--primary-color);
+}
+
+.about__info__story{
+    width:45%;
+}
+
+.about__info__story p{
+    font-family: var(--text-font);
+    font-weight: bolder;
+    font-size: 14pt;
+    letter-spacing: 2px;
+    word-spacing: 3px;
+}
+
+.about__info__story button{
+    border: none;
+    padding: 10px 20px;
+    font-size: 23px;
+    color: white;
+    background-color: var(--secondary-color);
+    margin: 40px 0;
+}
+
+.about__info__story button:hover{
+    background-color: var(--primary-color);
+    cursor: pointer;
+}
+
+.about__container-img{
+    width:45%;
+}
+
+.about__container-img img{
+    width: 100%;
+}
+/* section about details */
+
+.about__details{
+    width: 80%;
+    margin: 50px auto;
+}
+
+.about__details h2{
+    font-size: 28pt;
+    font-family: var(--text-font);
+    font-weight: 700;
+    text-align: center;
+    margin: 10px;
+}
+
+.about__details p{
+    font-family: var(--text-font);
+    font-weight: bolder;
+    font-size: 14pt;
+    letter-spacing: 2px;
+    word-spacing: 3px;
+    text-align: center;
+    margin: 30px;
+}
+
+.about__details button{
+    border: none;
+    padding: 10px 20px;
+    font-size: 23px;
+    color: var(--primary-color);
+    background-color: transparent;
+    margin: 40px 0;
+    display: block;
+    margin: 30px auto;
+    border: 2px solid var(--primary-color);
+    border-radius: 15px;
+    transition: color 1.5s, background-color 1.5s;
+}
+
+.about__details button:hover{
+    color: white;
+    background-color: var(--primary-color);
+    cursor: pointer;
+
+}
+
+.details__container-img{
+    width: 70%;
+    margin: 0 auto;
+    border: 1px solid rgb(245, 240, 240);
+}
+
+.details__container-img img{
+    width: 100%;
+}
+
+h2.about-subtitle{
+    font-size: 23pt;
+    font-family: var(--subtitle-font);
+    font-weight: 500;
+    margin-top:-50px ;
+    padding: 10px 0;
+}

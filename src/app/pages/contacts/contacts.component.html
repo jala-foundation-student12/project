@@ -1,0 +1,66 @@
+<section>
+    <div class="contacts">
+        <h2 class="subtitle">Contacts</h2>
+
+        <div class="contacts__user-contacts">
+
+            <div class="contacts__profile-user" *ngFor="let friend of friends">
+                <div class="user-contact__container" *ngIf="currentUser.uid == friend.receiver._id">
+                    <div class="user--img-container">
+                        <a href=""><img src="assets/img/avatar-user-noface.png" alt=""></a>
+                    </div>
+                    <div class="user-contact-info">
+                        <a href=""><h3 class="user-name">{{friend.sender.name}} {{ friend.sender.lastname | slice:0:5 }}{{ (friend.sender.lastname.length > 5) ? '...' : '' }}</h3></a>
+                        <span class="user-location">La Paz, Bolvia</span>
+                        <button class="user-see-more--btn delete-contact" (click)="deleteFriend(friend.uid)">Delete</button>
+                    </div>
+                </div>
+
+                <div class="user-contact__container" *ngIf="currentUser.uid == friend.sender._id">
+                    <div class="user--img-container">
+                        <a href=""><img src="assets/img/avatar-user-noface.png" alt=""></a>
+                    </div>
+                    <div class="user-contact-info">
+                        <a href=""><h3 class="user-name">{{friend.receiver.name}} {{ friend.receiver.lastname | slice:0:5 }}{{ (friend.receiver.lastname.length > 5) ? '...' : '' }}</h3></a>
+                        <span class="user-location">La Paz, Bolvia</span>
+                        <button class="user-see-more--btn delete-contact" (click)="deleteFriend(friend.uid)">Delete</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- <div class="contacts__profile-user">
+                <div class="user--img-container">
+                    <a href=""><img src="assets/img/avatar-user-noface.png" alt=""></a>
+                </div>
+                <div class="user-contact-info">
+                    <h3 class="user-name">Cristian Robles</h3>
+                    <span class="user-location">La Paz, Bolvia</span>
+                    <button class="user-see-more--btn">See more</button>
+                </div>
+            </div>
+
+            <div class="contacts__profile-user">
+                <div class="user--img-container">
+                    <a href=""><img src="assets/img/avatar-user-noface.png" alt=""></a>
+                </div>
+                <div class="user-contact-info">
+                    <h3 class="user-name">Cristian Robles</h3>
+                    <span class="user-location">La Paz, Bolvia</span>
+                    <button class="user-see-more--btn">See more</button>
+                </div>
+            </div>
+
+            <div class="contacts__profile-user">
+                <div class="user--img-container">
+                    <a href=""><img src="assets/img/avatar-user-noface.png" alt=""></a>
+                </div>
+                <div class="user-contact-info">
+                    <h3 class="user-name">Cristian Robles</h3>
+                    <span class="user-location">La Paz, Bolvia</span>
+                    <button class="user-see-more--btn">See more</button>
+                </div>
+            </div> -->
+
+        </div>
+    </div>
+</section>

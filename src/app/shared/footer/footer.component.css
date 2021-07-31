@@ -1,0 +1,33 @@
+/* ----- Footer ----- */
+footer{
+    background-color: var(--third-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0;
+}
+
+.footer__legal-info{
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.logo-start-page--footer{
+    color: royalblue;
+}
+
+.footer__legal-info a{
+    text-decoration: none;
+    font-family: var(--text-font-2);
+    font-size: 17pt;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+footer h3{
+    font-size: 13pt;
+    font-family: var(--text-font);
+    padding: 15px 0;
+}

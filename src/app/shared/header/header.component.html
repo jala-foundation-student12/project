@@ -1,0 +1,38 @@
+
+<!-- Header & Navbar -->
+<header>
+    <div class="header__logo-profile-navbar">
+        <div class="header__logo-kinc">
+            <a routerLink='/profile'><h2 class="logo-name">KinC</h2></a>
+        </div>
+
+        <div class="header__navbar" *ngIf="!isLogged">
+            <a class="header__navbar--sign" id="sign-up" (click)="modularSignUp()">Sign Up</a>
+            <a class="header__navbar--sign sign--focus" id="sign-in" (click)="modularSignIn()">Sign In</a>
+        </div>
+
+        <div class="header__profile-user" *ngIf="isLogged">
+            <div class="user--img-container">
+                <a routerLink='/profile'><img src="assets/img/avatar-user-noface.png" alt=""></a>
+            </div>
+            <h3 class="user-name">{{name}}</h3>
+        </div> 
+
+        <div class="header__navbar" *ngIf="isLogged">
+            <a routerLink='/profile/notifications'><i class="fas fa-bell"></i></a>
+            <a routerLink='/profile/discover'><i class="fas fa-compass"></i></a>
+            <a routerLink='/profile/contacts'><i class="fas fa-address-book"></i></a>
+
+            <a class="navbar__logout" (click)="logOut()"><i class="fas fa-sign-out-alt"></i></a>
+        </div>
+
+    </div>
+</header>
+
+<app-sign-modal [showModalSignIn]="showModalSignIn" 
+                (valueOut)="showModalSignIn = $event"
+
+                [showModalSignUp]="showModalSignUp" 
+                (valueOut)="showModalSignUp = $event"
+                >
+</app-sign-modal>

@@ -1,0 +1,44 @@
+<section>
+    <div class="notifications">
+
+        <h2 class="subtitle">Notificactions</h2>
+
+        <div class="notifications__user-request" *ngIf="users">
+
+            
+                <div class="user-request__name" *ngFor="let user of users, let i = index">
+                    <div class="user-request__container" *ngIf="!user.respond">
+                        <div class="notification__profile-user">
+                            <div class="user--img-container">
+                                <a href=""><img src="assets/img/avatar-user-noface.png" alt=""></a>
+                            </div>
+                            <h3 class="user-name">{{user.sender.name}} {{ user.sender.lastname | slice:0:5 }}{{ (user.sender.lastname.length > 5) ? '...' : '' }}</h3>
+                            
+                        </div>
+            
+                        <div class="user-request__options">
+                            <button class="option__btn-connect" (click)="respond(user.uid, true)">Connect</button>
+                            <button class="option__btn-reject" (click)="respond(user.uid, false)">Reject</button>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+            
+            
+
+            <!-- <div class="user-request__name">
+                <div class="notification__profile-user">
+                    <div class="user--img-container">
+                        <a href=""><img src="assets/img/avatar-user-noface.png" alt=""></a>
+                    </div>
+                    <h3 class="user-name">Diana Castro</h3>
+                </div>
+    
+                <div class="user-request__options">
+                    <span class="option__span-connected">Connected</span>
+                </div>
+            </div>
+            <hr> -->
+        </div>
+    </div>
+</section>

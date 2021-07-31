@@ -1,0 +1,104 @@
+/* modals */
+
+.container-modals{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: center;
+    justify-content: center;
+    align-items: center;
+    /* display: none; */
+}
+
+.modal__sign{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    height: max-content;
+    padding: 40px;
+    border-radius: 10px;
+    width: 30%;
+
+    /* display: none; */
+}
+
+.modal__sign h2{
+    font-family: var(--subtitle-font);
+    color: var(--secondary-color);
+}
+
+.sign-form{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin: 20px auto;
+}
+
+.sign__input-group{
+    padding: 5px;
+}
+
+.sign__input-group label{
+    font-family: var(--text-font-2);
+    margin: 5px 0;
+    font-weight: bolder;
+}
+
+.sign__input-group input[type='text'],
+.sign__input-group input[type='email'],
+.sign__input-group input[type='password']{
+    padding: 5px 10px;
+    font-family: var(--text-font);
+    width: 100%;
+    max-width: 100% !important;
+    min-width: 100%;
+    font-size: 14pt;
+}
+
+.sign__input-group input[type='password']{
+    max-width: 260px;
+    width: 260px;
+    display: block;
+    margin-left: 5px;
+}
+
+.sign__input-group input[type='text']:focus,
+.sign__input-group input[type='email']:focus,
+.sign__input-group input[type='password']:focus{
+    outline: none;
+}
+
+.sign__input-group input[type='submit']{
+    padding: 5px 10px;
+    border: 1px solid var(--secondary-color);
+    font-size: 12pt;
+    background-color: white;
+    color: var(--secondary-color);
+    transition: color 1s, background-color 1s;
+    border-radius: 5px;
+}
+
+.sign__input-group input[type='submit']:hover{
+    background-color: var(--secondary-color);
+    color: white;
+    cursor: pointer;
+}
+
+.sign-cancel-btn{
+    align-self: flex-end;
+    padding: 7px 12px;
+    border: 1px solid tomato;
+    font-size: 12pt;
+    background-color: tomato;
+    color: white;
+    border-radius: 5px;
+}
+
+.sign-cancel-btn:hover{
+    background: rgb(220, 80, 60);
+    cursor: pointer;
+}

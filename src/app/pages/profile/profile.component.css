@@ -1,0 +1,65 @@
+/* ----- Profile summarize ----- */
+
+.profile__summary{
+    width: 70%;
+    height: 300px;
+    margin: 0 auto;
+    margin-bottom: 50px;
+    padding-bottom: 50px;
+    /* background-color: salmon; */
+}
+
+.summary__background{
+    width: 100%;
+    height: 100%;
+    max-height: 300px;
+    background-color: var(--primary-light-color);
+}
+
+.summary__picture-button{
+    display: flex;
+    justify-content: space-between;
+}
+
+.picture-container{
+    width: 180px;
+    height: 180px;
+    margin-left: 50px;
+    margin-top: -90px;
+}
+
+.picture-container img{
+    width: 100%;
+}
+
+/* profile information */
+
+.profile__information{
+    width: 85%;
+    margin: 50px auto;
+}
+
+.summary__name-bio{
+    display: block;
+    padding: 15px 40px;
+    /* background-color: rgba(0, 0, 0, .05); */
+    width: 80%;
+    border-radius: 10px;
+    margin: 0 auto;
+}
+
+.summary__name-bio h3{
+    font-size: 26pt;
+    font-family: var(--header-font);
+    color: var(--secondary-color);
+}
+
+.summary__name-bio h3 .user-age{
+    font-size: 22pt;
+}
+
+.summary__name-bio .bio{
+    font-family: var(--text-font-2);
+    padding: 10px 0;
+    font-size: 12pt;
+}

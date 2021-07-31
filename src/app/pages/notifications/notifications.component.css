@@ -1,0 +1,58 @@
+/* ----- Notification ----- */
+
+.user-request__container{
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.user-request__name{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.user-request__options button{
+    margin: 0 10px;
+    padding: 7px 10px;
+    font-family: var(--text-font-2);
+    border: none;
+    color: white;
+    border-radius: 5px;
+}
+
+.user-request__options button.option__btn-connect{
+    background: cornflowerblue;
+}
+
+.user-request__options button.option__btn-connect:hover{
+    background: rgb(80, 120, 200);
+    cursor: pointer;
+}
+
+.user-request__options button.option__btn-reject{
+    background: tomato;
+}
+
+.user-request__options button.option__btn-reject:hover{
+    background: rgb(220, 80, 60);
+    cursor: pointer;
+}
+
+.user-request__options span.option__span-connected{
+    margin: 0 10px;
+    padding: 7px 10px;
+    font-family: var(--text-font-2);
+    background-color: rgba(0, 0, 0, 0.2);
+    color: white;
+    border-radius: 5px;
+}
+
+.notifications__user-request hr{
+    width: 80%;
+    margin: 0 auto;
+    border-top: 0.5px solid rgb(68, 68, 68);
+}

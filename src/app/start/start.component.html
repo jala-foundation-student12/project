@@ -1,0 +1,61 @@
+<app-header></app-header>
+
+<!-- Section about KinC-->
+<section class="">
+    <div class="about__info">
+        <div class="about__info__story">
+            <h2 class="logo-name logo-start-page">KinC</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Quo aspernatur similique tempora maiores. Rem, minima.
+                Minus rem dicta at quasi, obcaecati necessitatibus eveniet
+                fugiat earum molestiae tempora maxime labore atque!
+            </p>
+            <button (click)="modularSignIn()">Register</button>
+        </div>
+        <div class="about__container-img">
+            <img src="assets/img/redes.jpg" alt="">
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="about__details">
+        <h2>Save all your contacts of every social network!</h2>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+            Doloremque laboriosam quae voluptatem reprehenderit perspiciatis.
+            Dolore nulla, sapiente cumque error excepturi amet?
+        </p>
+        <button (click)="modularSignIn()">Start</button>
+        <div class="details__container-img">
+            <img src="assets/img/screen-user.png" alt="">
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="about__info">
+        <div class="about__container-img">
+            <img src="assets/img/4735926.jpg" alt="">
+        </div>
+        <div class="about__info__story">
+            <h2 class="about-subtitle">Covid doesn't apart friends</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Quo aspernatur similique tempora maiores. Rem, minima.
+                Minus rem dicta at quasi, obcaecati necessitatibus eveniet
+                fugiat earum molestiae tempora maxime labore atque!
+            </p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Quo aspernatur similique tempora maiores. Rem, minima.
+                Minus rem dicta at quasi, obcaecati necessitatibus eveniet
+                fugiat earum molestiae tempora maxime labore atque!
+            </p>
+        </div>
+    </div>
+</section>
+
+<app-footer></app-footer>
+
+<app-sign-modal [showModalSignIn]="showModalSignIn" 
+                (valueOut)="showModalSignIn = $event"
+                >
+</app-sign-modal>

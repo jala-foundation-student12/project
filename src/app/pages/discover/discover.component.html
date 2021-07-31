@@ -1,0 +1,52 @@
+<!-- Section discover -->
+<section>
+    <div class="discover">
+        <h2 class="subtitle">Discover</h2>
+
+        <div class="discover__search">
+            <div class="search__search-bar">
+                <form class="search-bar">
+
+                    <!-- <div class="select-filter">
+                        <select name="select">
+                            <option value="value1">Value 1</option>
+                            <option value="value2" selected>Value 2</option>
+                            <option value="value3">Value 3</option>
+                        </select>
+                    </div> -->
+
+                    <!-- <div class="bar-search"> -->
+                        <input type="text" placeholder="Search.." name="search" #word>
+                        <button type="button" (click)="searchUsers(word.value)"><i class="fa fa-search"></i></button>
+                    <!-- </div>   -->
+                </form>
+            </div>
+
+            <div class="search__links">
+                <a href="">College</a>
+                <a href="">Institute</a>
+                <a href="">Job</a>
+                <a href="">City</a>
+                <a href="">Country</a>
+                <a href="">Nationality</a>
+            </div>
+
+            <hr>
+        </div>
+
+        <div class="discover__users" >
+
+            <div class="contacts__profile-user" *ngFor="let user of users; let i = index">
+                <div class="user--img-container">
+                    <a href=""><img src="assets/img/avatar-user-noface.png" alt=""></a>
+                </div>
+                <div class="user-contact-info">
+                    <a href=""><h3 class="user-name">{{user.name}} {{ user.lastname | slice:0:5 }}{{ (user.lastname.length > 5) ? '...' : '' }}</h3></a>
+                    <!-- <span class="user-location">La Paz, Bolvia</span> -->
+                    <button class="user-see-more--btn" (click)="sendFrienship(user.uid)">Send</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
