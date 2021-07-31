@@ -23,12 +23,12 @@
             </div>
 
             <div class="search__links">
-                <a href="">College</a>
-                <a href="">Institute</a>
+                <a href="">University</a>
+                <a href="">School</a>
                 <a href="">Job</a>
-                <a href="">City</a>
-                <a href="">Country</a>
-                <a href="">Nationality</a>
+                <a href="">Address</a>
+                <a href="">Name</a>
+                <a href="">Lastname</a>
             </div>
 
             <hr>
@@ -42,8 +42,11 @@
                 </div>
                 <div class="user-contact-info">
                     <a href=""><h3 class="user-name">{{user.name}} {{ user.lastname | slice:0:5 }}{{ (user.lastname.length > 5) ? '...' : '' }}</h3></a>
-                    <!-- <span class="user-location">La Paz, Bolvia</span> -->
-                    <button class="user-see-more--btn" (click)="sendFrienship(user.uid)">Send</button>
+                    <span class="user-location">{{user.address}}</span>
+                    <span class="user-location">{{user.email}}</span>
+                    <span class="user-location">{{user.university}}</span>
+                    <span class="user-location">{{user.school}}</span>
+                    <button class="user-see-more--btn" (click)="sendFrienship(user.uid)">Connect</button>
                 </div>
             </div>
 

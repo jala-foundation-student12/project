@@ -11,7 +11,10 @@
                     </div>
                     <div class="user-contact-info">
                         <a href=""><h3 class="user-name">{{friend.sender.name}} {{ friend.sender.lastname | slice:0:5 }}{{ (friend.sender.lastname.length > 5) ? '...' : '' }}</h3></a>
-                        <span class="user-location">La Paz, Bolvia</span>
+                        <span class="user-location">{{friend.sender.address}}</span>
+                        <span class="user-location">{{friend.sender.university}}</span>
+                        <span class="user-location">{{friend.sender.email}}</span>
+                        <span class="user-location">{{friend.sender.telnumber}}</span>
                         <button class="user-see-more--btn delete-contact" (click)="deleteFriend(friend.uid)">Delete</button>
                     </div>
                 </div>
@@ -22,7 +25,8 @@
                     </div>
                     <div class="user-contact-info">
                         <a href=""><h3 class="user-name">{{friend.receiver.name}} {{ friend.receiver.lastname | slice:0:5 }}{{ (friend.receiver.lastname.length > 5) ? '...' : '' }}</h3></a>
-                        <span class="user-location">La Paz, Bolvia</span>
+                        <span class="user-location">{{friend.receiver.address}}</span>
+                        <span class="user-location">{{friend.receiver.university}}</span>
                         <button class="user-see-more--btn delete-contact" (click)="deleteFriend(friend.uid)">Delete</button>
                     </div>
                 </div>
